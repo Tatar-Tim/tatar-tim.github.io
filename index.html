@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
+    <img src="C:\Users\bagautdinovta\Desktop\Боты\web app\logotip.jpg" alt="логотип банка">
+    <h1>Добро пожаловать!</h1>
 </head>
 
 <body>
    <div id="usercard"> <!--Карта профиля, человека, который к нам обратился-->
    </div>
-   <p>Привет от бота</p> <!--Просто текст для проверки-->
+   <p>Первый сайт расскажет тебе покажет о банковских продуктах: карты, кредиты, вклады</p> 
    <a class="link" href="https://sovcombank.ru/">Сайт Совкомбанк</a> <!--Просто ссылка для проверки-->
+   <p>Следующий сайт расскажет тебе покажет о страховых продуктах: ОСАГО, КАСКО, страхование от несчастного случая, во время путешествий и прочее</p> 
    <a class="link" href="https://sovcomins.ru/">Сайт Совкомбанк Страхование</a> <!--Просто ссылка для проверки-->
-   <p class="hint">Some little hint</p> <!--Просто текст-подсказка для проверки-->
-   <button id="btn" class="button">Show/Hide Main Button</button> <!--Кнопка, чтобы скрыть / показать основную кнопку-->
-   <button id="btnED" class="button">Enable/Disable Main Button</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
+   <p>Но вот самое вкусное для тебя, скорее нажимай на кнопку, познакомишься с нашей корпоративной жизнью культурой и возможно здесь и сейчас найдешь новую работу на этом сайте</p>
    <button id="btnurl" class="button">Перейти на сайт</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
 </body>
 
@@ -36,7 +37,7 @@
    let btn1 = document.getElementById("btnurl"); //получаем кнопку скрыть/показать 
 
    btn1.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      tg.openLink('https://habr.com/ru/post/666278/')
+      tg.openLink('https://people.sovcombank.ru/')
    });
 
    let btn = document.getElementById("btn"); //получаем кнопку скрыть/показать 
@@ -71,7 +72,7 @@
    let usercard = document.getElementById("usercard"); //получаем блок usercard 
 
    let profName = document.createElement('p'); //создаем параграф
-   profName.innerText = 'Hello' + `${tg.initDataUnsafe.user.first_name}
+   profName.innerText = `${tg.initDataUnsafe.user.first_name}
    ${tg.initDataUnsafe.user.last_name}
    ${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;
    //выдем имя, "фамилию", через тире username и код языка

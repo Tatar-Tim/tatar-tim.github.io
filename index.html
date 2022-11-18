@@ -75,11 +75,12 @@
    profName.innerText = `${tg.initDataUnsafe.user.first_name}
    ${tg.initDataUnsafe.user.last_name}
    ${tg.initDataUnsafe.user.username}`;
-   profName.innerText += 'Hello'
+   //profName.innerText += 'Hello'
+   usercard.appendChild(profName);
    //выдем имя, "фамилию", через тире username и код языка
    //работает только в attachment menu
-   // let pic = document.createElement('img'); //создаем img
-   // pic.src = tg.initDataUnsafe.user.photo_url; //задаём src 
-   // usercard.appendChild(pic); //добавляем элемент в карточку 
+   let pic = document.createElement('img'); //создаем img
+   pic.src = tg.initDataUnsafe.user.photo_url; //задаём src 
+   usercard.appendChild(pic); //добавляем элемент в карточку 
 </script>
 </html>

@@ -74,8 +74,8 @@
    let profName = document.createElement('p'); //создаем параграф
    profName.innerText = `${tg.initDataUnsafe.user.first_name}
    ${tg.initDataUnsafe.user.last_name}
-   ${tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;
-   usercard.appendChild(profName); //добавляем 
+   ${tg.initDataUnsafe.user.username}`;
+   profName.innerText += 'Hello'
    //выдем имя, "фамилию", через тире username и код языка
    //работает только в attachment menu
    // let pic = document.createElement('img'); //создаем img
